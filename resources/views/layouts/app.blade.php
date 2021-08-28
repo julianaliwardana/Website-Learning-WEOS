@@ -43,7 +43,7 @@
                             <a href="{{ route('show-roadmap') }}" style="padding: 8px">Roadmap</a>
                         </li>
                         <li class="nav-item dropdown ml-2">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('courses') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 Course
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -91,6 +91,7 @@
                 </div>
             </div>
         </nav> --}}
+
         <div class="customNavbar w-100">
             <div class="row mx-0 my-custom-nav justify-content-start align-items-center">
                 <div class="ml-5 col-lg-1 col-md-2">
@@ -104,7 +105,7 @@
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-6">
-                    <a href="#" id="courses">Courses</a>
+                    <a href="{{ route('courses') }}" id="courses">Courses</a>
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-6">
                     <a href="{{ route('list-post') }}" id="forms">Post</a>

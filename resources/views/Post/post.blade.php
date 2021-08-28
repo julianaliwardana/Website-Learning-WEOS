@@ -11,15 +11,15 @@
             <p>{{$po->user['name']}}</p>
         @endforeach
         <table class="table table-striped table-bordered align-middle d-flex align-items-center justify-content-center text-center my-auto " style="width:100%">
-            <tr class="bg-warning text-black">
-                <th class="align-middle">Author</th>
+            <tr class="bg-secondary text-black">
+                <th class="align-middle">Materi Courses</th>
                 <th class="align-middle">Title</th>
                 <th class="align-middle">Content</th>
                 <th class="align-middle">Photo</th>
                 <th class="align-middle">View Post</th>
             </tr>
             @foreach ($posts as $post)
-            <tr class="bg-black text-white">
+            <tr class="bg-secondary bg-gradient text-white">
                 <td class="align-middle">{{$post->name}}</td>
                 <td class="align-middle">{{$post->title}}</td>
                 <td class="align-middle">{{$post->content}}</td>
@@ -33,7 +33,7 @@
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                     </form>
                 </td>
-                @elseif(Auth::user()->name === $post->name)
+                @elseif(Auth::id() === $post->user_id)
                 <td class="d-flex flex-column align-items-center align-middle" style="height: 500px;">
                     <a href="{{url('/view-post') . '/' . $post->id}}" name="next-page" class="btn btn-primary text-white my-auto">View</a>
                     <a href="{{url('/edit-post') . '/' . $post->id}}" name="next-page" class="btn btn-success text-white my-auto">Update</a>
