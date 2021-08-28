@@ -57,12 +57,15 @@ class PostController extends Controller
     public function show()
     {
         $posts = Post::all();
-        return view('Post\post', compact('posts'));
+        $threads = Post::with('user')->get();
+        $answer = Post::with('comment')->get();
+        // dd($answer);
+        return view('Post\post', compact('posts', 'threads', 'answer'));
     }
 
     public function myPost()
     {
-        $posts = Post::with('users')->orderBy('created_at', 'desc')->get();
+        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
         return view('Post\myPost', compact('posts'));
     }
 

@@ -148,10 +148,10 @@ main {
     content: "";
     position: absolute;
 
-    top: 0.8em;
-    height: 5em;
+    top: 0.4em;
+    height: 4em;
     width: 2px;
-    margin-left: 1em;
+    margin-left: 2em;
 
     background-color: #2fb4b8;
 }
@@ -162,4 +162,8 @@ main {
 
 .post-thread:last-child {
     margin-bottom: 0;
+}
+
+a.forum:hover {
+    text-decoration: none;
 }

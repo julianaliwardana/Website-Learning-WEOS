@@ -5,31 +5,77 @@
     <h1 class="text-center fw-bold" style="margin-top:100px;">Forum Discussion</h1>
     <a href="{{ route('form-post') }}"><button class="btn btn-primary">Add Post</button></a>
 </div>
-<div class="container mt-5">
-    @if (count($posts) === 0)
+
+@foreach ($posts as $post)
+    <a class="forum" href="{{url('/view-post') . '/' . $post->id}}">
+    <div class="container mt-3" style="width: 60%;">
+        @if (count($posts) === 0)
         <p>There are no posts!</p>
-    @else
-        @foreach ($posts as $post)
-        <div class="post-thread d-flex justify-content-between">
-            <div class="post-data p-3 text-center mt-3">
-                <span class="important-text">128</span>
+        @else
+        <div class="row post-thread">
+            <div class="col-2 post-data p-3 text-center mt-3">
+                {{-- @php($answerCount = 0)
+                @foreach ($answer as $answers)
+                    @if($answers->comments['id'] === $post->id)
+                    <span class="important-text">{{$answers->comments['id']}}</span>
+                        @php($answerCount++)
+                    @endif
+                @endforeach --}}
+                <span class="important-text">100</span>
                 <br>
                 <span>Answers</span>
             </div>
 
-            <span class="post-separator"></span>
+            {{-- <span class="post-separator"></span> --}}
 
-            <div class="p-3 align-self-center">
-                <p class="h5" style="font-weight: bold;">How to database in Java</p>
+            <div class="col-7 p-3 text-center mt-4">
+                <p class="h5" style="font-weight: bold;">{{$post->title}}</p>
             </div>
 
-            <div class="mt-4 p-3 text-right">
-                <span class="important-text">USERNAME</span>
+            <div class="col-3 mt-4 p-3 text-right">
+                @php($count = 1)
+                @foreach ($threads as $thread)
+                    @if($count == 1)
+                        <span class="important-text">{{$thread->user['name']}}</span>
+                    @endif
+                    @php($count++)
+                @endforeach
                 <br>
-                <span>27 Agustus 2021, 08:00 AM</span>
+                <span class="badge badge-dark bg-dark">
+                    <?php
+                    $createdDate = new DateTime($post->created_at);
+                    $currentDate = new DateTime(Carbon\Carbon::now());
+                    $interval = $createdDate->diff($currentDate);
+
+                    if ($interval->y > 1) {
+                        echo $interval->y . " years ago";
+                    } else if ($interval->y === 1) {
+                        echo $interval->y . " year ago";
+                    } else if ($interval->m > 1) {
+                        echo $interval->m . " months ago";
+                    } else if ($interval->m === 1) {
+                        echo $interval->m . " month ago";
+                    } else if ($interval->d > 1) {
+                        echo $interval->d . " days ago";
+                    } else if ($interval->d === 1) {
+                        echo $interval->d . " day ago";
+                    } else if ($interval->h > 1) {
+                        echo $interval->h . " hours ago";
+                    } else if ($interval->h === 1) {
+                        echo $interval->h . " hour ago";
+                    } else if ($interval->i > 1) {
+                        echo $interval->i . " minutes ago";
+                    } else if ($interval->i === 1) {
+                        echo $interval->i . " minute ago";
+                    } else if ($interval->s > 1) {
+                        echo $interval->s . " seconds ago";
+                    } else {
+                        echo $interval->s . " second ago";
+                    }
+                ?>
+                </span>
             </div>
         </div>
-        @endforeach
     @endif
     {{-- <div class="row">
         <table class="table table-striped table-bordered align-middle d-flex align-items-center justify-content-center text-center my-auto " style="width:100%">
@@ -76,6 +122,8 @@
         </table>
     </div> --}}
 </div>
+</a>
+@endforeach
 <div class="container text-center">
     <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-3" style="width: 71%;">Go to Home Page</a>
 </div>
