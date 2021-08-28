@@ -7,6 +7,9 @@
 </div>
 <div class="container mt-5 d-flex align-items-center justify-content-center">
     <div class="row">
+        @foreach ($p as $po)
+            <p>{{$po->user['name']}}</p>
+        @endforeach
         <table class="table table-striped table-bordered align-middle d-flex align-items-center justify-content-center text-center my-auto " style="width:100%">
             <tr class="bg-warning text-black">
                 <th class="align-middle">Author</th>

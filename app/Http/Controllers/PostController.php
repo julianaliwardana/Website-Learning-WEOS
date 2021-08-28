@@ -57,7 +57,7 @@ class PostController extends Controller
     public function show()
     {
         $posts = Post::all();
-        return view('Post\post', compact('posts'));
+        return view('Post\post', compact('posts', 'p'));
     }
 
     public function myPost()

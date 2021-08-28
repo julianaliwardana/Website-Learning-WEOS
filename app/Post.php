@@ -8,9 +8,9 @@ class Post extends Model
 {
     protected $table = 'posts';
 
-    public function users()
+    public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 
     public function comments()
