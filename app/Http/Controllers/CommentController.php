@@ -25,7 +25,7 @@ class CommentController extends Controller
         $comment = new Comment();
         $comment->content = $request->content;
         $comment->user_id = Auth::id();
-        $comment->article_id = $id;
+        $comment->post_id = $id;
         $comment->save();
 
         return redirect('view-post/' . $id);
