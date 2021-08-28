@@ -28,8 +28,7 @@ class PostController extends Controller
         $request->validate([
             'name' => 'required | max:255',
             'title' => 'required | max:255',
-            'content' => 'required',
-            'image' => 'required'
+            'content' => 'required'
         ]);
 
         $post = new Post();

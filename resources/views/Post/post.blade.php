@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-center fw-bold" style="margin-top:100px;">Forum Discussion</h1>
+<div class="container text-center">
+    <h1 class="text-center fw-bold" style="margin-top:100px;">Forum Discussion</h1>
+    <a href="{{ route('form-post') }}"><button class="btn btn-primary">Add Post</button></a>
+</div>
 <div class="container mt-5 d-flex align-items-center justify-content-center">
     <div class="row">
         <table class="table table-striped table-bordered align-middle d-flex align-items-center justify-content-center text-center my-auto " style="width:100%">
@@ -48,6 +51,8 @@
         </table>
     </div>
 </div>
-<a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-3" style="width: 71%; margin-left: 190px;">Go to Home Page</a>
+<div class="container text-center">
+    <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-3" style="width: 71%;">Go to Home Page</a>
+</div>
 @endsection
 

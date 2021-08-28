@@ -7,9 +7,9 @@
             <form action="{{ route('get-post') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <p class="mb-2 mt-4 fw-bold">Name</p>
+                    <p class="mb-2 mt-4 fw-bold">Materi Courses</p>
                     <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                        placeholder="Enter your Name">
+                        placeholder="Enter your courses">
                     @error('name')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror

@@ -22,7 +22,8 @@
 
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body>
     <div id="app">
@@ -99,14 +100,14 @@
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-6">
                     <div class="btn-group">
-                        <a href="#" id="courses">Roadmap</a>
+                        <a href="{{ route('show-roadmap') }}" id="courses">Roadmap</a>
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-6">
                     <a href="#" id="courses">Courses</a>
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-6">
-                    <a href="#" id="forms">Post</a>
+                    <a href="{{ route('list-post') }}" id="forms">Post</a>
                 </div>
                 @guest
                     <div class="col-lg-1 offset-lg-5 col-md-1 offset-md-1 col-sm-6 btn btn-success">
@@ -146,6 +147,38 @@
         <main style="padding-top: 150px;">
             @yield('content')
         </main>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Courses</h3>
+                        <ul>
+                            <li><a href="#">C Programming</a></li>
+                            <li><a href="#">Civil Engineering</a></li>
+                            <li><a href="#">Catering Courses</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>WEOS</h3>
+                        <p>WEOS is an online learning web that helps students who have difficulty learning their course material due to the difficulty of independent and unstructured learning. </p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">WEOS © 2021</p>
+            </div>
+        </footer>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

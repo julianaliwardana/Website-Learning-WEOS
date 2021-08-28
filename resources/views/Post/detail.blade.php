@@ -9,7 +9,7 @@
         <p>{{$viewPost->content}}</p>
     </div>
 </div>
-@include('comment/read')
+<!-- @include('comment/read') -->
 @yield('content2')
 @include('comment/create')
 @yield('content3')

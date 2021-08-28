@@ -42,7 +42,13 @@
 
             <div class="row mt-3">
                 <div class="input-group m-auto mb-3">
-                    <input type="text" class="form-control @error('type_learning') is-invalid @enderror" name="type_learning" placeholder="Add Your type_learning">
+                    <!-- <input type="text" class="form-control @error('type_learning') is-invalid @enderror" name="type_learning" placeholder="Add Your type_learning"> -->
+                    <select class="form-control @error('type_learning') is-invalid @enderror" name = "type_learning">
+                        <option>Visual</option>
+                        <option>Auditorial</option>
+                        <option>Kinestetik</option>
+                        <option>General</option>
+                    </select>
                     @error('type_learning')
                         <div class="invalid-feedback bg-danger text-white rounded mt-2 p-2">{{$message}}</div>
                     @enderror
