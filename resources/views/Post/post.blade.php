@@ -14,14 +14,7 @@
         @else
         <div class="row post-thread">
             <div class="col-2 post-data p-3 text-center mt-3">
-                {{-- @php($answerCount = 0)
-                @foreach ($answer as $answers)
-                    @if($answers->comments['id'] === $post->id)
-                    <span class="important-text">{{$answers->comments['id']}}</span>
-                        @php($answerCount++)
-                    @endif
-                @endforeach --}}
-                <span class="important-text">100</span>
+                <span class="important-text">{{count($post->comments)}}</span>
                 <br>
                 <span>Answers</span>
             </div>
@@ -33,13 +26,7 @@
             </div>
 
             <div class="col-3 mt-4 p-3 text-right">
-                @php($count = 1)
-                @foreach ($threads as $thread)
-                    @if($count == 1)
-                        <span class="important-text">{{$thread->user['name']}}</span>
-                    @endif
-                    @php($count++)
-                @endforeach
+                <span class="important-text">{{$post->user['name']}}</span>
                 <br>
                 <span class="badge badge-dark bg-dark">
                     <?php

@@ -56,11 +56,9 @@ class PostController extends Controller
 
     public function show()
     {
-        $posts = Post::all();
-        $threads = Post::with('user')->get();
-        $answer = Post::with('comment')->get();
+        $posts = Post::with('user', 'comments')->get();
         // dd($answer);
-        return view('Post\post', compact('posts', 'threads', 'answer'));
+        return view('Post\post', compact('posts'));
     }
 
     public function myPost()
@@ -78,9 +76,8 @@ class PostController extends Controller
 
     public function detail($id)
     {
-        $viewPost = Post::find($id);
-        $comments = Comment::with('user')->get();
-        // dd($comments);
+        $viewPost = Post::with('user', 'comments')->find($id);
+        $comments = Comment::with('user', 'post')->get();
         return view('Post\detail', compact('viewPost', 'comments'));
     }
 

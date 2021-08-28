@@ -7,7 +7,8 @@
                     Comments
                 </div>
                 <div class="card-body bg-black text-white">
-                    @foreach ($comments as $comment)
+                    {{-- @php(dd($viewPost->comment)) --}}
+                    @foreach ($viewPost->comments as $comment)
                     <div class="user mt-2">Author: {{$comment->user['name']}}</div>
                     <div class="content mb-2">Comment: {{$comment->content}}</div>
                     <hr>
