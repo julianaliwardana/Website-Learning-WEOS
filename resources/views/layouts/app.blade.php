@@ -145,7 +145,7 @@
             </div>
         </div>
 
-        <main style="padding-top: 150px;">
+        <main style="padding-top: 150px; padding-bottom: 6em;">
             @yield('content')
         </main>
 

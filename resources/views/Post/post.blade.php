@@ -5,11 +5,33 @@
     <h1 class="text-center fw-bold" style="margin-top:100px;">Forum Discussion</h1>
     <a href="{{ route('form-post') }}"><button class="btn btn-primary">Add Post</button></a>
 </div>
-<div class="container mt-5 d-flex align-items-center justify-content-center">
-    <div class="row">
-        @foreach ($p as $po)
-            <p>{{$po->user['name']}}</p>
+<div class="container mt-5">
+    @if (count($posts) === 0)
+        <p>There are no posts!</p>
+    @else
+        @foreach ($posts as $post)
+        <div class="post-thread d-flex justify-content-between">
+            <div class="post-data p-3 text-center mt-3">
+                <span class="important-text">128</span>
+                <br>
+                <span>Answers</span>
+            </div>
+
+            <span class="post-separator"></span>
+
+            <div class="p-3 align-self-center">
+                <p class="h5" style="font-weight: bold;">How to database in Java</p>
+            </div>
+
+            <div class="mt-4 p-3 text-right">
+                <span class="important-text">USERNAME</span>
+                <br>
+                <span>27 Agustus 2021, 08:00 AM</span>
+            </div>
+        </div>
         @endforeach
+    @endif
+    {{-- <div class="row">
         <table class="table table-striped table-bordered align-middle d-flex align-items-center justify-content-center text-center my-auto " style="width:100%">
             <tr class="bg-secondary text-black">
                 <th class="align-middle">Materi Courses</th>
@@ -52,7 +74,7 @@
             </tr>
             @endforeach
         </table>
-    </div>
+    </div> --}}
 </div>
 <div class="container text-center">
     <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-3" style="width: 71%;">Go to Home Page</a>
