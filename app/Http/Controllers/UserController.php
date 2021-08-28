@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
+use App\User;
 
 class UserController extends Controller
 {
@@ -36,5 +37,11 @@ class UserController extends Controller
         $profile->save();
 
         return redirect(url('/home'));
+    }
+
+    public function showProfile()
+    {
+        $profiles = Profile::all();
+        return view('Profile/read', compact('profiles'));
     }
 }

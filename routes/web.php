@@ -29,7 +29,8 @@ Route::get('/my-post', 'PostController@mypost')->name('my-post')->middleware('au
 Route::post('/post/{id}', 'CommentController@store')->name('comment-post')->middleware('auth');;
 Route::get('/Roadmap', 'HomeController@roadmap')->name('show-roadmap')->middleware('auth');;
 Route::post('/user/{user}', 'UserController@store')->name('create-profile');
-Route::get('/createprofile', 'UserController@create')->middleware('auth');
+Route::get('/create-profile', 'UserController@create')->middleware('auth');
+Route::get('/user/profile/{id}', 'UserController@showProfile')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
