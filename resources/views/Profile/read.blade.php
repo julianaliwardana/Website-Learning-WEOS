@@ -8,6 +8,7 @@
                 <h1>Hello My name is {{$profile->name}}</h1>
                 <h4 class="mb-5"> My Birthday is {{$profile->date_of_birth}}</h4>
                 <h4>My job is {{$profile->job}}</h4>
+                <h4>Im a {{$profile->learning_type}}</h4>
             @endif
         @endforeach
     </div>

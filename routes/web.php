@@ -34,5 +34,5 @@ Route::get('/user/profile/{id}', 'UserController@showProfile')->middleware('auth
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/courses', 'HomeController@courses')->name('courses');
 Auth::routes();
