@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
     <h1 class="text-center mt-5 fw-bold">Make Your Own Post</h1>
     <div class="container d-flex align-items-center justify-content-center" style="margin-top:50px;">
-        <div class="jumbotron">
+        <div class="jumbotron" style="background: #c5ccda; width: 200rem">
             <form action="{{ route('get-post') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <p class="mb-2 mt-4 fw-bold">Materi Courses</p>
+                    <p class="mb-2  fw-bold">Courses</p>
                     <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
                         placeholder="Enter your courses">
                     @error('name')

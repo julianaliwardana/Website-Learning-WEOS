@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container text-center">
-    <h1 class="text-center fw-bold" style="margin-top:100px;">Forum Discussion</h1>
-    <a href="{{ route('form-post') }}"><button class="btn btn-primary">Add Post</button></a>
+    <h1 class="text-center fw-bold mb-3" style="margin-top:100px;">Forum Discussion</h1>
+    <a href="{{ route('form-post') }}"><button class="btn btn-primary mb-2">Add Post</button></a>
 </div>
 
 @foreach ($posts as $post)
@@ -23,6 +23,7 @@
 
             <div class="col-7 p-3 text-center mt-4">
                 <p class="h5" style="font-weight: bold;">{{$post->title}}</p>
+                <p class="h6" style="color: #787878">{{$post->name}}</p>
             </div>
 
             <div class="col-3 mt-4 p-3 text-right">
@@ -112,7 +113,7 @@
 </a>
 @endforeach
 <div class="container text-center">
-    <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-3" style="width: 71%;">Go to Home Page</a>
+    <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-4" style="width: 71%;">Go to Home Page</a>
 </div>
 @endsection
 
