@@ -32,7 +32,13 @@ class HomeController extends Controller
         return view('Roadmap\roadmap');
     }
 
-    public function courses() {
+    public function civilRoadmap()
+    {
+        return view('Roadmap\civil-engineering');
+    }
+
+    public function courses()
+    {
         $profiles = Profile::all();
         return view('courses', compact('profiles'));
     }
