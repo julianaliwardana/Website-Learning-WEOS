@@ -24,7 +24,7 @@
 
             <div class="row mt-3">
                 <div class="input-group m-auto mb-3">
-                    <input type="text" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" placeholder="Add Your Date_of_Birth">
+                    <input type="text" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" placeholder="Add Your Date of Birth">
                     @error('date_of_birth')
                         <div class="invalid-feedback bg-danger text-white rounded mt-2 p-2">{{$message}}</div>
                     @enderror

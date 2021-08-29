@@ -11,8 +11,8 @@
         @elseif($profile->learning_type == "Visual")
         Hello Visual
 
-        @elseif($profile->learning_type == "Auditorial")
-            hh
+        @elseif($profile->learning_type == "Audiotorial")
+        Hello Audiotorial
 
         {{-- General --}}
         @else

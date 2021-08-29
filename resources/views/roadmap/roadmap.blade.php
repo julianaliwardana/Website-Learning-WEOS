@@ -18,8 +18,8 @@
                 <div class="card" style="width: 20rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Teknik Sipil</h5>
-                        <p class="card-text">8 Kelas</p>
+                        <h5 class="card-title">Civil Engineering</h5>
+                        <p class="card-text">5 Kelas</p>
                         <a href="#" class="btn btn-primary">View Roadmap</a>
                     </div>
                 </div>
@@ -28,8 +28,8 @@
                 <div class="card" style="width: 20rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">UI/UX Designer</h5>
-                        <p class="card-text">5 Kelas</p>
+                        <h5 class="card-title">Management Construction</h5>
+                        <p class="card-text">8 Kelas</p>
                         <a href="#" class="btn btn-primary">View Roadmap</a>
                     </div>
                 </div>
