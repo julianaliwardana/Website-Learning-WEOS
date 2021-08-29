@@ -5,8 +5,8 @@
     <div class="row">
         {{-- @php(dd($viewPost->comments)) --}}
         <h1>{{$viewPost->title}}</h1>
-        <h4 class="mb-5">Author: {{$viewPost->name}}</h4>
-        <img src="{{ asset('upload/photo/' . $viewPost['image']) }}" class="mb-5 mx-auto" style="width:300px;">
+        <h4 class="mb-5">By {{$viewPost->name}}</h4>
+        <img src="{{ asset('upload/photo/' . $viewPost['image']) }}" class="mb-5 mx-auto" style="width:500px;">
         <p>{{$viewPost->content}}</p>
     </div>
 </div>

@@ -95,7 +95,7 @@
         <div class="customNavbar w-100">
             <div class="row mx-0 my-custom-nav justify-content-start align-items-center">
                 <div class="ml-5 col-lg-1 col-md-2">
-                    <a href="#">
+                    <a href="{{ url('/home') }}">
                         <img src="{{ asset('image/logo.png') }}" width="80px">
                     </a>
                 </div>
@@ -108,7 +108,7 @@
                     <a href="{{ route('courses') }}" id="courses">Courses</a>
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-6">
-                    <a href="{{ route('list-post') }}" id="forms">Post</a>
+                    <a href="{{ route('list-post') }}" id="forms">Forum</a>
                 </div>
                 @guest
                     <div class="col-lg-1 offset-lg-5 col-md-1 offset-md-1 col-sm-6 btn btn-success">
