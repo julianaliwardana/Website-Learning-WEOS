@@ -113,7 +113,7 @@
 </a>
 @endforeach
 <div class="container text-center">
-    <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-4" style="width: 71%;">Go to Home Page</a>
+    <a href="{{ url('/home') }}" name="next-page" class="btn btn-primary text-white mt-4" style="width: 80%;">Go to Home Page</a>
 </div>
 @endsection
 

@@ -44,9 +44,6 @@ class PostController extends Controller
             $filename = time() . '.' . $extension;
             $file->move('upload/photo/', $filename);
             $post->image = $filename;
-        } else {
-            return $request;
-            $post->image = '';
         }
 
         $post->save();
